@@ -1,0 +1,17 @@
+# Yocto build artifacts -- never commit (tens of GB)
+build/
+downloads/
+sstate-cache/
+tmp/
+bitbake.lock
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
