@@ -1,6 +1,6 @@
 # meta-vigilo
 
-Yocto layer for the [Vigilo](https://github.com/TUO_USERNAME/vigilo) edge predictive maintenance gateway.
+Yocto layer for the [Vigilo](https://github.com/vannidelprete/vigilo) edge predictive maintenance gateway.
 
 ## Dependencies
 
