@@ -1,0 +1,27 @@
+name: Gateway
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install oelint-adv
+        run: pip install oelint-adv
+
+      - name: Lint BitBake recipes
+        run: |
+          FILES=$(find . -name "*.bb" -o -name "*.bbappend" | tr '\n' ' ')
+          if [ -n "$FILES" ]; then
+            oelint-adv $FILES
+          else
+            echo "No BitBake recipes found yet"
+          fi
