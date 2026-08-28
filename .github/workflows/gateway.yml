@@ -25,3 +25,11 @@ jobs:
           else
             echo "No BitBake recipes found yet"
           fi
+
+      - name: Lint shell scripts
+        run: shellcheck scripts/*.sh
+
+      - name: Validate kas.yml
+        run: |
+          pip install kas
+          kas dump kas.yml > /dev/null

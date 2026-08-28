@@ -1,0 +1,34 @@
+header:
+  version: 19
+
+machine: raspberrypi4-64
+distro: poky
+
+repos:
+  poky:
+    url: https://github.com/yoctoproject/poky
+    branch: scarthgap
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
+  meta-openembedded:
+    url: https://github.com/openembedded/meta-openembedded
+    branch: scarthgap
+    layers:
+      meta-oe:
+      meta-python:
+  meta-raspberrypi:
+    url: https://github.com/agherzan/meta-raspberrypi
+    branch: scarthgap
+    layers:
+      .:
+
+local_conf_header:
+  vigilo-uart: |
+    ENABLE_UART = "1"
+  vigilo-cache: |
+    DL_DIR = "/home/giovanni/poky/build/downloads"
+    SSTATE_DIR = "/home/giovanni/poky/build/sstate-cache"
+  vigilio-debug: |
+    EXTRA_IMAGE_FEATURES += "debug-tweaks"

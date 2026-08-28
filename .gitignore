@@ -15,3 +15,10 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# kas-cloned layer repos - not part of this project, re-cloned by kas.yml
+/poky/
+/meta-*/
+
+# kas shell session history
+.kas_shell_history
