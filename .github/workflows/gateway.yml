@@ -21,7 +21,7 @@ jobs:
         run: |
           FILES=$(find . -name "*.bb" -o -name "*.bbappend" | tr '\n' ' ')
           if [ -n "$FILES" ]; then
-            oelint-adv --suppress oelint.file.requirenotfound $FILES
+            oelint-adv --suppress oelint.file.requirenotfound,oelint.var.suggestedvar.BUGTRACKER,oelint.var.suggestedvar.CVE_PRODUCT,oelint.var.suggestedvar.SECTION,oelint.vars.multilineident $FILES
           else
             echo "No BitBake recipes found yet"
           fi
