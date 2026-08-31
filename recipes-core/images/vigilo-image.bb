@@ -4,8 +4,7 @@ LICENSE = "MIT"
 
 require recipes-core/images/core-image-minimal.bb
 
-IMAGE_INSTALL += " \
-    mosquitto \
+IMAGE_INSTALL += "mosquitto \
     python3-paho-mqtt \
     python3-numpy \
 "
