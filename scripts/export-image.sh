@@ -2,7 +2,7 @@
 set -euo pipefail
 
 MACHINE="raspberrypi4-64"
-IMAGE="core-image-minimal"
+IMAGE="${1:-core-image-minimal}"
 DEPLOY_DIR="$(cd "$(dirname "$0")/.." && pwd)/build/tmp/deploy/images/${MACHINE}"
 LINK="${DEPLOY_DIR}/${IMAGE}-${MACHINE}.rootfs.wic.bz2"
 

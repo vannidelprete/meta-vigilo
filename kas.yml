@@ -3,6 +3,7 @@ header:
 
 machine: raspberrypi4-64
 distro: poky
+target: core-image-minimal
 
 repos:
   poky:
@@ -18,9 +19,14 @@ repos:
     layers:
       meta-oe:
       meta-python:
+      meta-networking:
   meta-raspberrypi:
     url: https://github.com/agherzan/meta-raspberrypi
     branch: scarthgap
+    layers:
+      .:
+  meta-vigilo:
+    path: .
     layers:
       .:
 
