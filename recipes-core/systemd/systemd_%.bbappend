@@ -7,4 +7,4 @@ do_install:append:raspberrypi4-64(){
     install -m 0644 ${WORKDIR}/25-wlan0-dhcp.network ${D}${sysconfdir}/systemd/network/
 }
 
-FILES:${PN}:raspberrypi4-64 += "${sysconfdir}/systemd/network/25-wlan0-dhcp.network"
+FILES:${PN}:raspberrypi4-64 = "${sysconfdir}/systemd/network/25-wlan0-dhcp.network"
