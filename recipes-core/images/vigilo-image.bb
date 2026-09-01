@@ -13,4 +13,6 @@ IMAGE_INSTALL += "mosquitto \
     linux-firmware-rpidistro-bcm43455 \
     kernel-module-brcmfmac \
     kernel-module-brcmfmac-wcc \
+    wpa-supplicant \
+    wpa-supplicant-passphrase \
 "
