@@ -10,4 +10,7 @@ IMAGE_INSTALL += "mosquitto \
     python3-paho-mqtt \
     python3-numpy \
     vigilo-detector \
+    linux-firmware-rpidistro-bcm43455 \
+    kernel-module-brcmfmac \
+    kernel-module-brcmfmac-wcc \
 "

@@ -40,3 +40,5 @@ local_conf_header:
     EXTRA_IMAGE_FEATURES += "debug-tweaks"
   vigilo-init-manager: |
     INIT_MANAGER = "systemd"
+  vigilo-wifi-firmware: |
+    LICENSE_FLAGS_ACCEPTED += "synaptics-killswitch"
