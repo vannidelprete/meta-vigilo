@@ -30,6 +30,7 @@ jobs:
               --suppress oelint.var.bbclassextend \
               --suppress oelint.vars.unpackdir \
               --constantmods +AUTHOR \
+              -- \
               $FILES
           else
             echo "No BitBake recipes found yet"
