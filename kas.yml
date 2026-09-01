@@ -38,3 +38,5 @@ local_conf_header:
     SSTATE_DIR = "/home/giovanni/poky/build/sstate-cache"
   vigilio-debug: |
     EXTRA_IMAGE_FEATURES += "debug-tweaks"
+  vigilo-init-manager: |
+    INIT_MANAGER = "systemd"
