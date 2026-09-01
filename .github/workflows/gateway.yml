@@ -30,6 +30,7 @@ jobs:
               --suppress oelint.var.bbclassextend \
               --suppress oelint.vars.unpackdir \
               --suppress oelint.vars.mispell.unknown \
+              --suppress oelint.func.specific \
               -- \
               $FILES
           else
