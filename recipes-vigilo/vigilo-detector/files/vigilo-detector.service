@@ -1,0 +1,16 @@
+[Unit]
+Description=Vigilo vibration detection engine
+After=network-online.target mosquitto.service
+Wants=network-online.target
+Requires=mosquitto.service
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/vigilo-detector
+ExecStart=/usr/bin/python3 /usr/share/vigilo-detector/monitor.py --baseline /etc/vigilo/baseline.csv --device-id vigilo-01
+EnvironmentFile=-/etc/vigilo/environment
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

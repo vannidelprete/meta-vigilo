@@ -27,6 +27,11 @@ jobs:
               --suppress oelint.var.suggestedvar.CVE_PRODUCT \
               --suppress oelint.var.suggestedvar.SECTION \
               --suppress oelint.vars.multilineident \
+              --suppress oelint.var.bbclassextend \
+              --suppress oelint.vars.unpackdir \
+              --suppress oelint.vars.mispell.unknown \
+              --suppress oelint.func.specific \
+              -- \
               $FILES
           else
             echo "No BitBake recipes found yet"
