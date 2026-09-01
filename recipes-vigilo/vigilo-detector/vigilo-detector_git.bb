@@ -31,4 +31,4 @@ do_install() {
 }
 
 FILES:${PN} += "${systemd_unitdir}/system/vigilo-detector.service"
-RDEPENDS:${PN} = "python3-core python3-paho-mqtt python3-numpy"
+RDEPENDS:${PN} = "python3-core python3-numpy python3-paho-mqtt"
