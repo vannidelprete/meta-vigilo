@@ -15,4 +15,5 @@ IMAGE_INSTALL += "mosquitto \
     kernel-module-brcmfmac-wcc \
     wpa-supplicant \
     wpa-supplicant-passphrase \
+    avahi-daemon \
 "
